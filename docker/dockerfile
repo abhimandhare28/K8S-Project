@@ -1,0 +1,11 @@
+# Use the official Nginx image from Docker Hub
+FROM nginx:alpine
+
+# Copy your static site (index.html) into the default nginx public folder
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose port 80 (optional if you're just using docker run -p)
+EXPOSE 80
+
+# Nginx runs by default, no CMD needed
+
