@@ -1,0 +1,10 @@
+# Use the official NGINX image
+FROM nginx:alpine
+
+# Copy your built frontend files to the default NGINX public folder
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
